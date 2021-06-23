@@ -1,0 +1,19 @@
+from .models import *
+from flask_restful import Resource, reqparse
+from flask_jwt_extended import jwt_required
+
+parser = reqparse.RequestParser()
+
+class Region(Resource):
+    # @jwt_required
+    def post(self):
+        return 'post'
+    
+    def get(self):
+        return 'get'
+
+    def delete(self):
+        return 'delete'
+
+    def put(self):
+        return 'put'
